@@ -32,7 +32,7 @@ const NavBar = ({ setSearchText, searchText }) => {
     <>
       <div className="navbar w-full mt-5">
         <div className="flex-1">
-          <a href="/" className=" font-bold text-red-950 text-sm md:text-xl">Pti</a>
+          <a href="/" className=" font-bold text-red-950 text-sm md:text-xl">Pti.</a>
         </div>
 
         <div className="flex-1  w-full gap-2">
