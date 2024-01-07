@@ -1,8 +1,7 @@
 
-# Client-SMS
-# A Food Management System
+Food Delivery App
 
-Welcome to the  project! This is an SM System website that provides a platform for organizing and managing activities and courses online. It offers a range of features for administrators, instructors, and students to enhance the summer camp learning experience.
+Welcome to the Food Delivery App project! This application is designed to facilitate food ordering and delivery, providing a seamless experience for both customers and restaurant owners. Below, you'll find information about the features, technologies used, and ways to contact the development team.
 
 ## Features
 
@@ -25,6 +24,8 @@ Welcome to the  project! This is an SM System website that provides a platform f
 If you have any questions, feel free to reach out to us:
 
 - Email: hasibul.dcc@gmail.com
-- Website: 
-- GitHub: 
+- Website: https://pti-mu.vercel.app/
+- GitHub: https://github.com/hasibul1670/food-delivery-app
 # food-delivery-app
+
+Thank you for choosing our Food Delivery App for your culinary needs! We hope you have a delightful experience using our platform.
