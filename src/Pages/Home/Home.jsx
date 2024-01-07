@@ -1,5 +1,5 @@
-import Popular from "../OtherPages/Popular";
-import Recommended from "../OtherPages/Recommended";
+import Popular from "../ProductPages/Popular";
+import Recommended from "../ProductPages/Recommended";
 import Banner from "./Banner";
 
 const Home = () => {

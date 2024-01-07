@@ -1,27 +1,26 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
-
-const NavBar = () => {
+const NavBar = ({ setSearchText, searchText }) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-   const inputRef = useRef(null);
+  const inputRef = useRef(null);
 
-   useEffect(() => {
-     const handleClickOutside = (event) => {
-       if (inputRef.current && !inputRef.current.contains(event.target)) {
-         // Clicked outside the input field
-         setDropdownVisible(false);
-       }
-     };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (inputRef.current && !inputRef.current.contains(event.target)) {
+        // Clicked outside the input field
+        setDropdownVisible(false);
+      }
+    };
 
-     // Attach the event listener
-     document.addEventListener("click", handleClickOutside);
+    // Attach the event listener
+    document.addEventListener("click", handleClickOutside);
 
-     return () => {
-       // Remove the event listener when the component is unmounted
-       document.removeEventListener("click", handleClickOutside);
-     };
-   }, [isDropdownVisible]); 
-
+    return () => {
+      // Remove the event listener when the component is unmounted
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isDropdownVisible]);
 
   const hideDropdownOnMobile = () => {
     if (window.innerWidth < 800) {
@@ -33,7 +32,7 @@ const NavBar = () => {
     <>
       <div className="navbar w-full mt-5">
         <div className="flex-1">
-          <a className="  font-bold text-red-950 text-sm md:text-xl">Pti</a>
+          <a href="/" className=" font-bold text-red-950 text-sm md:text-xl">Pti</a>
         </div>
 
         <div className="flex-1  w-full gap-2">
@@ -44,6 +43,9 @@ const NavBar = () => {
             <input
               ref={inputRef}
               type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              name="searchText"
               placeholder="Search Your Food"
               className={`input w-24 bg-base-300 md:w-auto ${
                 isDropdownVisible
@@ -58,7 +60,7 @@ const NavBar = () => {
           id="dropdown"
           className={isDropdownVisible ? "hidden md:block" : " "}
         >
-          <select className="select select-primary  font-bold w-24 lg:w-32">
+          <select className="w-24 bg-red-400  select select-primary  font-semibold lg:w-32 text-sm ">
             <option disabled selected>
               MENU
             </option>
@@ -92,7 +94,6 @@ const NavBar = () => {
               <li>
                 <a className="justify-between">
                   Profile
-                  <span className="badge">New</span>
                 </a>
               </li>
               <li>
